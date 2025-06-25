@@ -12,174 +12,6 @@
 		(comment 4 "Author: Saeed Solomon")
 	)
 	(lib_symbols
-		(symbol "Device:D"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_Small_US"
 			(pin_numbers
 				(hide yes)
@@ -301,192 +133,6 @@
 					(at 0 -2.54 90)
 					(length 1.016)
 					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Open"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Open*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SolderJumper_2_Open_0_1"
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -916,18 +562,6 @@
 		)
 		(uuid 33aeb3f9-7e1d-4f8f-87ce-2f3aa46b5d0a)
 	)
-	(rectangle
-		(start 163.83 121.92)
-		(end 248.92 147.32)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 676749d7-1f2b-4fb8-8702-39679d05a575)
-	)
 	(text "MOSFET model still to be determined"
 		(exclude_from_sim no)
 		(at 187.198 158.75 0)
@@ -958,15 +592,15 @@
 		)
 		(uuid "818b037c-ce39-4423-b002-b43069732f1b")
 	)
-	(text "Flyback diode included for protection from back emf generated \nfrom inductive loads. This design is only for the laser and LEDs\nhowever I included this just in case ( as per why the jumper\nwas included)\n\nThe flyback diode needs to be connected across the load so I'm\nnot even sure it would be able to be connected since the load\nwould most likely be on the Rasberry Pi or connected externally \nto it."
+	(text "When the control is HIGH it switches the gate ON allowing\ncurrent to flow from the load through to ground essentially \ncompleting the circuit. Conversly when the control is LOW \ncurrent is blocked the circuit remains incomplete and the\nload OFF."
 		(exclude_from_sim no)
-		(at 212.09 135.128 0)
+		(at 196.85 130.556 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "84f8d698-4cec-4677-9cc5-aede3da99972")
+		(uuid "bde1cdc0-5dd4-4729-bdb7-b445d4a26995")
 	)
 	(text "Control refers to the output pins of\nthe Rasberry Pi that is controlled by\nthe Python Peripheral Module that will\ncontrol the output of the LEDs or laser\non a low level (ON/OFF)"
 		(exclude_from_sim no)
@@ -984,12 +618,6 @@
 		(color 0 0 0 0)
 		(uuid "2cd83fc3-46fa-4f4e-98f4-82e7b700fccb")
 	)
-	(junction
-		(at 158.75 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e1aa8b4c-8470-4499-bd26-70534b617829")
-	)
 	(wire
 		(pts
 			(xy 158.75 157.48) (xy 158.75 162.56)
@@ -1002,7 +630,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 144.78) (xy 158.75 147.32)
+			(xy 158.75 142.24) (xy 158.75 147.32)
 		)
 		(stroke
 			(width 0)
@@ -1032,16 +660,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 144.78) (xy 167.64 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70c05405-395c-4090-9777-dcdc1ccb9cb8")
-	)
-	(wire
-		(pts
 			(xy 137.16 152.4) (xy 140.97 152.4)
 		)
 		(stroke
@@ -1062,16 +680,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 142.24) (xy 158.75 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98e9d184-5ca3-4eef-b44c-b12b0a895b0c")
-	)
-	(wire
-		(pts
 			(xy 148.59 161.29) (xy 148.59 162.56)
 		)
 		(stroke
@@ -1079,26 +687,6 @@
 			(type default)
 		)
 		(uuid "cee936c1-f7a2-4eb0-86ab-5e54988474a5")
-	)
-	(wire
-		(pts
-			(xy 167.64 127) (xy 167.64 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0b87df0-dff2-4f58-bd66-cbcd4cab6edd")
-	)
-	(label "Load"
-		(at 158.75 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2d6602fc-7db4-412c-a80d-54d1272b424f")
 	)
 	(label "Control"
 		(at 137.16 152.4 90)
@@ -1110,15 +698,15 @@
 		)
 		(uuid "72cdb1bf-67cd-4ffa-8186-a96882a45acd")
 	)
-	(label "Power"
-		(at 167.64 127 0)
+	(label "Load"
+		(at 158.75 142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "d8be4933-7d74-41cd-8631-fcb5bd4083aa")
+		(uuid "e0d24082-2a69-471b-a553-76056220425e")
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
@@ -1250,94 +838,6 @@
 			(project ""
 				(path "/435687ed-7edd-4a45-a329-a0e1ed3ec891"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 167.64 133.35 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3f9879c1-f86d-457f-b3be-298e647520df")
-		(property "Reference" "D1"
-			(at 170.18 132.0799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "D"
-			(at 170.18 134.6199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 167.64 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 167.64 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 167.64 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 167.64 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4e0e90ae-a9e8-4b1c-a846-6bbcd28c330c")
-		)
-		(pin "1"
-			(uuid "803275d8-0eb2-48be-8f70-1a8aea6b4768")
-		)
-		(instances
-			(project ""
-				(path "/435687ed-7edd-4a45-a329-a0e1ed3ec891"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -1487,76 +987,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 167.64 140.97 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e38b9008-4866-4aaf-b2d3-fb329e18ac98")
-		(property "Reference" "JP1"
-			(at 170.18 139.6999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Jumper"
-			(at 170.18 142.2399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 167.64 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 167.64 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "af5af606-22fa-4b35-bc35-23d31877d650")
-		)
-		(pin "1"
-			(uuid "0277c7fc-d158-41e4-a582-c5e748a370be")
-		)
-		(instances
-			(project ""
-				(path "/435687ed-7edd-4a45-a329-a0e1ed3ec891"
-					(reference "JP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 148.59 162.56 0)
 		(unit 1)
@@ -1611,7 +1041,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e8e9ce59-b910-4464-b72b-3250a6a6d0ff")
+			(uuid "e8e9ce59-b910-4464-b72b-3250a6a6d100")
 		)
 		(instances
 			(project ""
