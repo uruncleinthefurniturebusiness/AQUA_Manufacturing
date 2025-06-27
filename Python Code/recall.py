@@ -1,7 +1,4 @@
-i = 9000
-SWITCH_PINS = {8:'X', 7:'Y', 0:'Z'}
+def HelloWorld():
+    print("Worked")
 
-def readLimit(i):
-    print("Limit switch of ", SWITCH_PINS[i], " axis reached")
-
-readLimit(8)
+HelloWorld()
