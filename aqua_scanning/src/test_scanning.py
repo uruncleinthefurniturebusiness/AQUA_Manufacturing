@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 import time
-import sys
-sys.path.insert(0, '/Users/kiyur/OneDrive - University of Cape Town/ECE/Practical Training/EEE3000X/AQUA/AQUA_Manufacturing/aqua_scanning')
-from src.scanning import capture_image, preprocess_image
+# import sys
+# sys.path.insert(0, '/Users/kiyur/OneDrive - University of Cape Town/ECE/Practical Training/EEE3000X/AQUA/AQUA_Manufacturing/aqua_scanning')
+from scanning import capture_image, preprocess_image
 
 def generate_synthetic_image():
     """
