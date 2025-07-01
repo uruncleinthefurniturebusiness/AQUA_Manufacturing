@@ -42,21 +42,28 @@ def capture_image(use_camera=True, image_path=None):
             raise FileNotFoundError(f"Image not found at {image_path}")
         return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Convert BGR to RGB
 
-def preprocess_image(image):
+def preprocess_image(image, use_adaptive=True):
     """
     Preprocess an image to isolate the laser line for 3D scanning.
-    Steps: Grayscale conversion, Gaussian blur, and fixed thresholding.
-    Optimized for Raspberry Pi 5, with lower threshold for better laser isolation.
+    Steps: Grayscale conversion, Gaussian blur, and adaptive/fixed thresholding.
+    Optimized for Raspberry Pi 5, with adaptive thresholding for robustness.
     Args:
         image (numpy.ndarray): Input RGB image (height, width, 3).
+        use_adaptive (bool): If True, use adaptive thresholding; else, fixed threshold.
     Returns:
         numpy.ndarray: Binary image with laser line at 255, background at 0.
-    Source: Based on FabScan's preprocessing [1] and OpenCV best practices [2], [3].
+    Source: Based on FabScan's preprocessing [1], OpenCV documentation [2], and laser line detection [7].
     """
     # Convert to grayscale to focus on intensity
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     # Apply 5x5 Gaussian blur to reduce noise
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    # Apply fixed thresholding to isolate bright laser line
-    _, thresh = cv2.threshold(blurred, 50, 255, cv2.THRESH_BINARY)
+    if use_adaptive:
+        # Adaptive thresholding for varying lighting conditions
+        thresh = cv2.adaptiveThreshold(
+            blurred, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
+        )
+    else:
+        # Fixed thresholding as fallback, threshold 50 based on testing
+        _, thresh = cv2.threshold(blurred, 50, 255, cv2.THRESH_BINARY)
     return thresh

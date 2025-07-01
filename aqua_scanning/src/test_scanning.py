@@ -60,7 +60,7 @@ synthetic_image = generate_synthetic_image()
 # Test image acquisition and preprocessing
 start_time = time.time()
 image = capture_image(use_camera=False, image_path='data/synthetic_laser.jpg')
-thresh = preprocess_image(image)
+thresh = preprocess_image(image, use_adaptive=True)  # Test adaptive thresholding
 end_time = time.time()
 
 # Generate ground truth for false positive rate
