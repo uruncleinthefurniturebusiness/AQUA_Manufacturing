@@ -12,26 +12,26 @@ except ImportError:
 
 def capture_image(use_camera=True, image_path=None):
     """
-    Capture an image from the Pi Camera 3 or load a synthetic image.
-    Designed for AQUA's scanning pipeline, supporting integration with Z-axis (camera),
-    X-axis (nozzle), and Y-axis/rotation (bed).
+    Capture an image from the Raspberry Pi Camera Module 3 or load a synthetic image.
+    Designed for AQUA's 3D scanning pipeline, supporting integration with movable Z-axis
+    (camera), X-axis (nozzle), and rotating Y-axis (bed). Returns RGB image for OpenCV.
     Args:
-        use_camera (bool): If True, capture from camera; else, load from file.
+        use_camera (bool): If True, use Pi Camera 3; else, load from file.
         image_path (str): Path to image file if use_camera is False.
     Returns:
-        numpy.ndarray: RGB image (480x640).
+        numpy.ndarray: RGB image (height, width, 3).
     Raises:
+        ImportError: If picamera2 is unavailable and use_camera is True.
         ValueError: If image_path is None when use_camera is False.
         FileNotFoundError: If image_path is invalid.
-    Source: Adapted from FabScan [1] and picamera2 documentation [4].
+    Source: Adapted from FabScan's image capture [1], optimized for NumPy efficiency.
     """
     if use_camera:
         if Picamera2 is None:
-            raise ImportError("picamera2 not available; use image_path for testing")
+            raise ImportError("picamera2 not available; set use_camera=False for testing")
         picam2 = Picamera2()
-        picam2.configure(picam2.create_still_configuration(main={"size": (640, 480)}))
         picam2.start()
-        image = picam2.capture_array("main")  # RGB image as NumPy array
+        image = picam2.capture_array("main")  # Capture RGB image
         picam2.stop()
         return image
     else:
@@ -45,18 +45,18 @@ def capture_image(use_camera=True, image_path=None):
 def preprocess_image(image):
     """
     Preprocess an image to isolate the laser line for 3D scanning.
-    Steps: Grayscale conversion, 5x5 Gaussian blur, fixed thresholding (200).
-    Optimized for Raspberry Pi 5 efficiency and AQUA’s 50-micron resolution goal.
+    Steps: Grayscale conversion, Gaussian blur, and fixed thresholding.
+    Optimized for Raspberry Pi 5, with lower threshold for better laser isolation.
     Args:
-        image (numpy.ndarray): Input RGB image (480x640).
+        image (numpy.ndarray): Input RGB image (height, width, 3).
     Returns:
         numpy.ndarray: Binary image with laser line at 255, background at 0.
-    Source: OpenCV documentation [6], laser line detection techniques [7].
+    Source: Based on FabScan's preprocessing [1] and OpenCV best practices [2], [3].
     """
     # Convert to grayscale to focus on intensity
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     # Apply 5x5 Gaussian blur to reduce noise
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    # Apply fixed thresholding to isolate laser line
-    _, thresh = cv2.threshold(blurred, 200, 255, cv2.THRESH_BINARY)
+    # Apply fixed thresholding to isolate bright laser line
+    _, thresh = cv2.threshold(blurred, 50, 255, cv2.THRESH_BINARY)
     return thresh
