@@ -14,31 +14,31 @@ import time
 # Global variables
 LED_PIN = [10, 9]
 LASER_PIN = [25, 11]
-SWITCH_PINS = {8:'X', 7:'Y', 0:'Z', 5:'Z_cam'}
+SWITCH_PINS = 5
 HALL_PIN = 1
 GPIO.setmode(GPIO.BCM)   # to use the GPIO pin numbers
 LED_1_status = False; LASER_1_status = False
 LED_2_status = False; LASER_2_status = False
-X_limit; Y_limit; Z_limit   # Read in from Mahir's section
+X_limit = False; Y_limit = False; Z_limit = False   # Read in from Mahir's section
 Theta_limit = False; Z_cam_limit = False
 
 
 # Pins always in output mode
 # laser 1
 pwm_laser1 = GPIO.setup(25, GPIO.OUT)
-pwm_laser1 = GPIO.PWM(25, 1000)   # 1000 is the frequency pwm, CHANGE !!!!!!!!
+pwm_laser1 = GPIO.PWM(25, 1000)   # 1000 is the frequency pwm
 
 # Laser 2
 pwm_laser2 = GPIO.setup(11, GPIO.OUT)
-pwm_laser2 = GPIO.PWM(11, 1000)   # 1000 is the frequency pwm, CHANGE !!!!!!!!
+pwm_laser2 = GPIO.PWM(11, 1000)   # 1000 is the frequency pwm
 
 # LED 1
 pwm_led1 = GPIO.setup(10, GPIO.OUT)
-pwm_led1 = GPIO.PWM(10, 1000)   # 1000 is the frequency pwm, CHANGE !!!!!!!!
+pwm_led1 = GPIO.PWM(10, 1000)   # 1000 is the frequency pwm
 
 # LED 2
 pwm_led2 = GPIO.setup(9, GPIO.OUT)
-pwm_led2 = GPIO.PWM(9, 1000)   # 1000 is the frequency pwm, CHANGE !!!!!!!!
+pwm_led2 = GPIO.PWM(9, 1000)   # 1000 is the frequency pwm
 
 # ============================================================
 
@@ -101,20 +101,12 @@ def laser_on(num: int, state: bool, intensity: int = 100):
 # To read state of limit switches and write them to a file
 def readLimit(i):
     if GPIO.input(i):
-        print("Limit switch of", SWITCH_PINS[i], "axis reached") 
+        print("Limit switch of Z_cam axis reached") 
 
-    global X_limit, Y_limit, Z_limit, Z_cam_limit  # allow writing to global vars
+    global Z_cam_limit  # allow writing to global vars
     state = GPIO.input(i)   # 1 or 0
     
-    match i:
-        case 8:
-            X_limit = bool(state)   # bool converts the 1 or 0 to True or False
-        case 7:
-            Y_limit = bool(state)
-        case 0: 
-            Z_limit = bool(state)
-        case 5:
-            Z_cam_limit = bool(state)
+    Z_cam_limit = bool(state)
 
     writeStatus()   # Write new statuses to the file
 

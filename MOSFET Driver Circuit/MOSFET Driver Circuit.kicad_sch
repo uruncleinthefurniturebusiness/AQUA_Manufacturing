@@ -150,7 +150,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:NDT3055L"
+		(symbol "Transistor_FET:2N7000"
 			(pin_names
 				(hide yes)
 			)
@@ -166,7 +166,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "NDT3055L"
+			(property "Value" "2N7000"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -175,7 +175,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -186,7 +186,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ndt3055l-d.pdf"
+			(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -196,7 +196,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "4A Id, 60V Vds, N-Channel Logic Level Enhancement Mode MOSFET, SOT-223"
+			(property "Description" "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"
 				(at 0 0 0)
 				(effects
 					(font
@@ -205,7 +205,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "n channel fet"
+			(property "ki_keywords" "N-Channel MOSFET Logic-Level"
 				(at 0 0 0)
 				(effects
 					(font
@@ -214,7 +214,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*"
+			(property "ki_fp_filters" "TO?92*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -223,7 +223,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "NDT3055L_0_1"
+			(symbol "2N7000_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -390,7 +390,7 @@
 					)
 				)
 			)
-			(symbol "NDT3055L_1_1"
+			(symbol "2N7000_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -401,7 +401,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -419,7 +419,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -437,7 +437,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -561,16 +561,6 @@
 			(type none)
 		)
 		(uuid 33aeb3f9-7e1d-4f8f-87ce-2f3aa46b5d0a)
-	)
-	(text "MOSFET model still to be determined"
-		(exclude_from_sim no)
-		(at 187.198 158.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "55c4b26c-8aff-4464-83e5-2576233cd4f0")
 	)
 	(text "Low-side switching MOSFET design"
 		(exclude_from_sim no)
@@ -707,6 +697,82 @@
 			(justify left bottom)
 		)
 		(uuid "e0d24082-2a69-471b-a553-76056220425e")
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7000")
+		(at 156.21 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "05ad2c0f-b9f2-4af0-8e16-7b354ad6bb71")
+		(property "Reference" "Q1"
+			(at 162.56 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7000"
+			(at 162.56 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 161.29 154.305 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
+			(at 161.29 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"
+			(at 156.21 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "f1b9b4be-bb27-4cbc-ba7c-b79122ea393b")
+		)
+		(pin "2"
+			(uuid "188732fe-f803-4d85-a588-2eec051b9c0a")
+		)
+		(pin "1"
+			(uuid "4a4ff877-b56c-4dfc-97ed-b89dcb1cab7a")
+		)
+		(instances
+			(project ""
+				(path "/435687ed-7edd-4a45-a329-a0e1ed3ec891"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
@@ -905,82 +971,6 @@
 			(project ""
 				(path "/435687ed-7edd-4a45-a329-a0e1ed3ec891"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:NDT3055L")
-		(at 156.21 152.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f9ccb94-79db-4d0b-af6c-71cb483bdc7b")
-		(property "Reference" "Q1"
-			(at 162.56 151.1299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NDT3055L"
-			(at 162.56 153.6699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 161.29 154.305 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ndt3055l-d.pdf"
-			(at 161.29 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "4A Id, 60V Vds, N-Channel Logic Level Enhancement Mode MOSFET, SOT-223"
-			(at 156.21 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "35b9e01e-edb1-4203-90d8-a67285a3a2a4")
-		)
-		(pin "3"
-			(uuid "138fd377-d553-47e5-9170-f80c84a1cb76")
-		)
-		(pin "2"
-			(uuid "f36d3c43-fb29-471d-90a2-a04acf3ce0f0")
-		)
-		(instances
-			(project ""
-				(path "/435687ed-7edd-4a45-a329-a0e1ed3ec891"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
